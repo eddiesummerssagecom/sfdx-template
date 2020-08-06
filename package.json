@@ -1,0 +1,15 @@
+{
+  "name": "sfdx-template",
+  "version": "1.0.0",
+  "description": "Basic template for new SFDX projects.",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "deploy": "sfdx force:source:push -f",
+    "test": "sfdx force:source:push -f && sfdx force:apex:test:run -r human -w 15",
+    "packaging": "node ./scripts/deploy-to-packaging-org",
+    "lint": "pmd.bat -d src -f text -cache .pmd-cache -R ./pmd-apex-ruleset.xml"
+  },
+  "author": "Eddie Summers <eddie.summers@sage.com>"
+}

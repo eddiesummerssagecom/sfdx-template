@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset
+    name="performance-management"
+    xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+
+    <description>Apex ruleset for the project.</description>
+
+    <rule ref="rulesets/apex/quickstart.xml">
+        <exclude name="ApexDoc" />
+        <exclude name="ApexSharingViolations" />
+        <exclude name="ApexCRUDViolation" />
+        <exclude name="EmptyStatementBlock" />
+    </rule>
+
+    <!-- Allow underscores in test method names -->
+    <rule ref="category/apex/codestyle.xml/MethodNamingConventions">
+        <properties>
+            <property name="skipTestMethodUnderscores" value="true" />
+        </properties>
+    </rule>
+
+    <!-- Allow up to 5 parameters in a method signature -->
+    <rule ref="category/apex/design.xml/ExcessiveParameterList">
+        <properties>
+            <property name="minimum" value="6" />
+        </properties>
+    </rule>
+
+</ruleset>

@@ -1,0 +1,11 @@
+# VS Code
+*.code-workspace
+
+# SFDX Cache
+.sfdx/
+
+# Package-format source
+build/
+
+# Misc
+.pmd-cache
