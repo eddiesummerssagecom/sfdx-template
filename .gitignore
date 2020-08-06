@@ -1,5 +1,6 @@
 # VS Code
-*.code-workspace
+.vscode
+
 
 # SFDX Cache
 .sfdx/
