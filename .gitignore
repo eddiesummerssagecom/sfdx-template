@@ -1,6 +1,6 @@
-# VS Code
+# IDEs
 .vscode
-
+.idea
 
 # SFDX Cache
 .sfdx/
